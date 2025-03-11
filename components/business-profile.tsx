@@ -1090,7 +1090,7 @@ export default function BusinessProfile() {
           </div>
           <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-white/60">
-              © {new Date().getFullYear()} Tharuh. All rights reserved by Taric.
+              © {new Date().getFullYear()} Tharuh. All rights reserved by Galang.
             </p>
             <div className="flex gap-4">
               <Link
