@@ -420,7 +420,7 @@ export default function BusinessProfile() {
         className="relative h-screen flex items-center justify-center"
       >
         <BackgroundPaths
-          title="Tharuh Carwash & Cafe"
+          title="Tharuh Coffee & Carwash"
           onDiscoverClick={scrollToAbout}
         />
         <motion.div
@@ -463,10 +463,10 @@ export default function BusinessProfile() {
           >
             <div className="space-y-6">
               <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">
-                Our Story
+                Cerita Kami
               </Badge>
               <h2 className="text-4xl font-bold tracking-tight">
-                Coffee Blend and Car Wash
+                Coffee and Car Wash
               </h2>
               <p className="text-white/70 leading-relaxed">
                 Didirikan pada tahun 2018, Tharuh Carwash & Cafe merevolusi
@@ -485,15 +485,15 @@ export default function BusinessProfile() {
               <div className="pt-4 flex flex-wrap gap-6">
                 <div className="flex flex-col">
                   <span className="text-3xl font-bold text-primary">5K+</span>
-                  <span className="text-sm text-white/60">Happy Customers</span>
+                  <span className="text-sm text-white/60">Customer Puas</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-3xl font-bold text-primary">15+</span>
-                  <span className="text-sm text-white/60">Expert Staff</span>
+                  <span className="text-sm text-white/60">Staff Ahli</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-3xl font-bold text-primary">4.9</span>
-                  <span className="text-sm text-white/60">Customer Rating</span>
+                  <span className="text-sm text-white/60">Penilaian Customer</span>
                 </div>
               </div>
             </div>
@@ -523,7 +523,7 @@ export default function BusinessProfile() {
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
                   <Car className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-medium mb-2">Detailed Washing</h3>
+                <h3 className="font-medium mb-2">Cuci Mendetail</h3>
                 <p className="text-sm text-white/60">
                   Pencucian mobil mendetail pada setiap sudut
                 </p>
@@ -535,7 +535,7 @@ export default function BusinessProfile() {
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
                   <Coffee className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-medium mb-2">Premium Coffee</h3>
+                <h3 className="font-medium mb-2">Kopi Premium</h3>
                 <p className="text-sm text-white/60">
                   Biji Kopi berkualitas khusus dan barista ahli
                 </p>
@@ -547,7 +547,7 @@ export default function BusinessProfile() {
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
                   <Clock className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-medium mb-2">Quick Service</h3>
+                <h3 className="font-medium mb-2">Layanan Efisien</h3>
                 <p className="text-sm text-white/60">
                   Proses yang efisien untuk meminimalkan waktu tunggu
                 </p>
@@ -559,7 +559,7 @@ export default function BusinessProfile() {
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-medium mb-2">Convenient Location</h3>
+                <h3 className="font-medium mb-2">Lokasi Strategis</h3>
                 <p className="text-sm text-white/60">
                   Mudah diakses dengan tempat parkir yang luas
                 </p>
@@ -580,7 +580,7 @@ export default function BusinessProfile() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">
-              Our Services
+              Layanan Kami
             </Badge>
             <h2 className="text-4xl font-bold tracking-tight mb-4">
               Layanan Terbaik bagi Anda dan Mobil Anda
@@ -599,7 +599,7 @@ export default function BusinessProfile() {
                 className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
               >
                 <Car className="mr-2 h-4 w-4" />
-                Car Wash Services
+                Car Wash
               </TabsTrigger>
               <TabsTrigger
                 value="cafe"
@@ -708,7 +708,7 @@ export default function BusinessProfile() {
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
               onClick={scrollToContact}
             >
-              Book an Appointment
+              Booking Sekarang
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>
@@ -726,7 +726,7 @@ export default function BusinessProfile() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">
-              Our Gallery
+              Galeri
             </Badge>
             <h2 className="text-4xl font-bold tracking-tight mb-4">
               Testimonials
@@ -801,7 +801,7 @@ export default function BusinessProfile() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <span className="text-white font-medium">
-                    Tharuh Experience
+                    Pelanggan Tharuh
                   </span>
                 </div>
               </motion.div>
@@ -828,10 +828,10 @@ export default function BusinessProfile() {
           >
             <div className="space-y-6">
               <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">
-                Contact Us
+                Hubungi Kami
               </Badge>
               <h2 className="text-4xl font-bold tracking-tight">
-                Be part of Tharuh community
+                Menjadi bagian dari Tharuh
               </h2>
               <p className="text-white/70">
                 Kunjungi kami hari ini atau hubungi kami untuk mempelajari lebih
@@ -845,7 +845,7 @@ export default function BusinessProfile() {
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Location</h3>
+                    <h3 className="font-medium mb-1">Lokasi</h3>
                     <p className="text-white/70">
                       Jl. Tidar, Kloncing, Karangrejo, Kec. Sumbersari, Jember
                     </p>
@@ -857,7 +857,7 @@ export default function BusinessProfile() {
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Hours</h3>
+                    <h3 className="font-medium mb-1">Jam</h3>
                     <p className="text-white/70">24/7</p>
                   </div>
                 </div>
@@ -867,7 +867,7 @@ export default function BusinessProfile() {
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Phone</h3>
+                    <h3 className="font-medium mb-1">Nomor</h3>
                     <p className="text-white/70">(62) 123-4567</p>
                   </div>
                 </div>
@@ -878,7 +878,7 @@ export default function BusinessProfile() {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Email</h3>
-                    <p className="text-white/70">info@tharuhcs.com</p>
+                    <p className="text-white/70">tharuh.cs@gmail.com</p>
                   </div>
                 </div>
               </div>
