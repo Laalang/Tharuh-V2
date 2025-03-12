@@ -111,7 +111,7 @@ export default function BackgroundPaths({
                 hover:shadow-md dark:hover:shadow-neutral-800/50"
                 onClick={onDiscoverClick}
               >
-                <span className="opacity-90 group-hover:opacity-100 transition-opacity">Discover Excellence</span>
+                <span className="opacity-90 group-hover:opacity-100 transition-opacity">Jelajahi</span>
                 <span
                   className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
                   transition-all duration-300"

@@ -178,28 +178,28 @@ export default function BusinessProfile() {
   const services = {
     carwash: [
       {
-        name: "Express Wash",
+        name: "Paket Express",
         price: "55k",
         description:
           "Pencucian eksterior cepat dengan bilas bebas noda, membersihakan debu eksterior",
         time: "10 min",
       },
       {
-        name: "Deluxe Wash",
+        name: "Paket Deluxe",
         price: "75k",
         description:
           "Pencucian eksterior, semir ban, dan membersikah debu interior",
         time: "20 min",
       },
       {
-        name: "Premium Detail",
+        name: "Paket Premium",
         price: "80k",
         description:
           "Lengkapi pembersihan interior dan eksterior dengan perlindungan lilin",
         time: "45 min",
       },
       {
-        name: "Ultimate Package",
+        name: "Paket Kilap",
         price: "95k",
         description:
           "Detail lengkap dengan wax premium, pengkondisian interior, dan pembersihan uap",
@@ -208,25 +208,25 @@ export default function BusinessProfile() {
     ],
     cafe: [
       {
-        name: "Specialty Coffee",
+        name: "Americano",
         price: "20k",
         description: "Kopi yang baru diseduh dan minuman espresso",
         category: "Drinks",
       },
       {
-        name: "Artisan Teas",
+        name: "Es teh",
         price: "15k",
         description: "Pilihan teh daun alami premium",
         category: "Drinks",
       },
       {
-        name: "Fresh Pastries",
+        name: "Cookies Coklat",
         price: "10k",
         description: "Makanan panggang dan kue kering setiap hari",
         category: "Food",
       },
       {
-        name: "Gourmet Sandwiches",
+        name: "Ropang",
         price: "22k",
         description:
           "Sandwich yang dibuat berdasarkan pesanan dengan bahan-bahan premium",
