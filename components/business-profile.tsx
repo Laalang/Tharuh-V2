@@ -420,7 +420,7 @@ export default function BusinessProfile() {
         className="relative h-screen flex items-center justify-center"
       >
         <BackgroundPaths
-          title="Tharuh Coffee & Carwash"
+          title="Tharuh Chill & Space"
           onDiscoverClick={scrollToAbout}
         />
         <motion.div
@@ -469,11 +469,11 @@ export default function BusinessProfile() {
                 Coffee and Car Wash
               </h2>
               <p className="text-white/70 leading-relaxed">
-                Didirikan pada tahun 2018, Tharuh Carwash & Cafe merevolusi
+                Didirikan pada tahun 2021, Tharuh Chill & Space merevolusi
                 pengalaman mencuci mobil tradisional dengan menggabungkan
                 premium perawatan kendaraan dengan suasana kafe yang canggih.
                 Konsep kami lahir dari ide sederhana: kenapa harus menunggu
-                iseng kapan Anda bisa menikmati kopi artisanal dan makanan yang
+                iseng kapan Anda bisa menikmati kopi dan makanan yang
                 baru dipanggang?
               </p>
               <p className="text-white/70 leading-relaxed">
@@ -501,7 +501,7 @@ export default function BusinessProfile() {
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <Image
                   src="https://lh5.googleusercontent.com/p/AF1QipMk5bJYoUD-kAKGcFzOQynEVwnuaaboOPI7nnNF=s508-k-no"
-                  alt="Splash & Sip Carwash and Cafe"
+                  alt="Tharuh Chill & Space"
                   width={800}
                   height={600}
                   className="w-full h-auto object-cover"
@@ -586,7 +586,7 @@ export default function BusinessProfile() {
               Layanan Terbaik bagi Anda dan Mobil Anda
             </h2>
             <p className="text-white/70">
-              Perpaduan sempurna antara perawatan mobil dan budaya kafe. Kami
+              Perpaduan sempurna antara perawatan mobil dan kafe. Kami
               menawarkan layanan komprehensif untuk menjaga Anda kendaraan murni
               sambil menikmati minuman berkualitas.
             </p>
@@ -831,7 +831,7 @@ export default function BusinessProfile() {
                 Hubungi Kami
               </Badge>
               <h2 className="text-4xl font-bold tracking-tight">
-                Menjadi bagian dari Tharuh
+                Menjadi bagian dari Tharuh Chill & Space
               </h2>
               <p className="text-white/70">
                 Kunjungi kami hari ini atau hubungi kami untuk mempelajari lebih
@@ -868,7 +868,7 @@ export default function BusinessProfile() {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Nomor</h3>
-                    <p className="text-white/70">(62) 123-4567</p>
+                    <p className="text-white/70">(62) 822-3412-2329</p>
                   </div>
                 </div>
 
@@ -989,7 +989,7 @@ export default function BusinessProfile() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
-              <h3 className="text-lg font-bold">Tharuh Carwash & Cafe</h3>
+              <h3 className="text-lg font-bold">Tharuh Chill & Space</h3>
               <p className="text-sm text-white/60">
                 Perpaduan sempuran antara carwash dan cafe, memberikan layanan
                 terbaik serta produk premium.
@@ -1090,7 +1090,7 @@ export default function BusinessProfile() {
           </div>
           <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-white/60">
-              © {new Date().getFullYear()} Tharuh. All rights reserved by Galang.
+              © {new Date().getFullYear()} Tharuh. All rights reserved.
             </p>
             <div className="flex gap-4">
               <Link
@@ -1112,6 +1112,9 @@ export default function BusinessProfile() {
                 Sitemap
               </Link>
             </div>
+            <p className="text-xs text-white/60">
+               {new Date().getFullYear()} Build by Galang.
+            </p>
           </div>
         </div>
       </footer>
