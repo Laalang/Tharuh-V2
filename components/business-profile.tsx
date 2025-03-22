@@ -251,19 +251,19 @@ export default function BusinessProfile() {
 
   const galleryImages = [
     {
-      src: "https://drive.google.com/file/d/1C64sgI-dcjjamh8SkAAogFaaOkmgdJ62/view?usp=drive_link",
+      src: "https://i.imgur.com/P0jqn82.jpeg",
       alt: "Coffee on the table",
     },
     {
-      src: "https://drive.google.com/file/d/1D-x3_1nhXRdygL0cjJnmFeibm_JJNsu6/view?usp=drive_link",
+      src: "https://i.imgur.com/WlOsY10.jpeg",
       alt: "Haha hihi",
     },
     {
-      src: "https://drive.google.com/file/d/1LhOJgLJmEGSAQNn46hdwYC0XKNb5KLR1/view?usp=drive_link",
+      src: "https://i.imgur.com/5Oe4oyJ.jpeg",
       alt: "interior",
     },
     {
-      src: "https://drive.google.com/file/d/1CaEbs7M7NbxNo6HtWL9o2Fr8vzels9QI/view?usp=drive_link",
+      src: "https://i.imgur.com/E1yNlSI.jpeg",
       alt: "Cafe atmosphere",
     },
   ];
@@ -500,7 +500,7 @@ export default function BusinessProfile() {
             <div className="relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <Image
-                  src="https://drive.google.com/file/d/13vgWYq6ZJYi-RpTYvG5z4oTyPcOxZRJy/view?usp=drive_link"
+                  src="https://i.imgur.com/rctHizo.jpeg"
                   alt="Tharuh Chill & Space"
                   width={800}
                   height={600}
