@@ -251,19 +251,19 @@ export default function BusinessProfile() {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      alt: "Car being washed",
+      src: "https://drive.google.com/file/d/1C64sgI-dcjjamh8SkAAogFaaOkmgdJ62/view?usp=drive_link",
+      alt: "Coffee on the table",
     },
     {
-      src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      alt: "Coffee being poured",
+      src: "https://drive.google.com/file/d/1D-x3_1nhXRdygL0cjJnmFeibm_JJNsu6/view?usp=drive_link",
+      alt: "Haha hihi",
     },
     {
-      src: "https://images.unsplash.com/photo-1635767798638-3e25273a8236?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      alt: "Car interior detailing",
+      src: "https://drive.google.com/file/d/1LhOJgLJmEGSAQNn46hdwYC0XKNb5KLR1/view?usp=drive_link",
+      alt: "interior",
     },
     {
-      src: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2341&q=80",
+      src: "https://drive.google.com/file/d/1CaEbs7M7NbxNo6HtWL9o2Fr8vzels9QI/view?usp=drive_link",
       alt: "Cafe atmosphere",
     },
   ];
@@ -339,7 +339,7 @@ export default function BusinessProfile() {
             </div>
             <div className="text-sm text-white/60">
               <p>Open 7 days a week</p>
-              <p>7:00 AM - 8:00 PM</p>
+              <p>7:00 AM - 7:00 AM</p>
             </div>
           </div>
         </div>
@@ -466,7 +466,7 @@ export default function BusinessProfile() {
                 Cerita Kami
               </Badge>
               <h2 className="text-4xl font-bold tracking-tight">
-                Coffee and Car Wash
+                Chill & Space
               </h2>
               <p className="text-white/70 leading-relaxed">
                 Didirikan pada tahun 2021, Tharuh Chill & Space merevolusi
@@ -500,7 +500,7 @@ export default function BusinessProfile() {
             <div className="relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <Image
-                  src="https://lh5.googleusercontent.com/p/AF1QipMk5bJYoUD-kAKGcFzOQynEVwnuaaboOPI7nnNF=s508-k-no"
+                  src="https://drive.google.com/file/d/13vgWYq6ZJYi-RpTYvG5z4oTyPcOxZRJy/view?usp=drive_link"
                   alt="Tharuh Chill & Space"
                   width={800}
                   height={600}
@@ -1113,7 +1113,7 @@ export default function BusinessProfile() {
               </Link>
             </div>
             <p className="text-xs text-white/60">
-               {new Date().getFullYear()} Build by Galang.
+               {new Date().getFullYear()} Made by Galang.
             </p>
           </div>
         </div>
