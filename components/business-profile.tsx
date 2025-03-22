@@ -208,28 +208,28 @@ export default function BusinessProfile() {
     ],
     cafe: [
       {
-        name: "Americano",
-        price: "20k",
-        description: "Kopi yang baru diseduh dan minuman espresso",
+        name: "Coffee Based",
+        price: "12k - 26k",
+        description: "Varian olahan kopi",
         category: "Drinks",
       },
       {
-        name: "Es teh",
-        price: "15k",
-        description: "Pilihan teh daun alami premium",
+        name: "Milk Based",
+        price: "15k - 18k",
+        description: "Varian olahan susu",
         category: "Drinks",
       },
       {
-        name: "Cookies Coklat",
-        price: "10k",
-        description: "Makanan panggang dan kue kering setiap hari",
-        category: "Food",
+        name: "Tea Based",
+        price: "9k - 14k",
+        description: "Varian olahan teh",
+        category: "Drinks",
       },
       {
-        name: "Ropang",
-        price: "22k",
+        name: "Snack",
+        price: "8k - 15k",
         description:
-          "Sandwich yang dibuat berdasarkan pesanan dengan bahan-bahan premium",
+          "Variasi jajanan snack",
         category: "Food",
       },
     ],
@@ -801,7 +801,7 @@ export default function BusinessProfile() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <span className="text-white font-medium">
-                    Pelanggan Tharuh
+                    Tharuh Experience
                   </span>
                 </div>
               </motion.div>
