@@ -153,25 +153,25 @@ export default function BusinessProfile() {
       name: "Dea Salsabila",
       text: "Mobil saya tidak pernah sebersih ini dan kopinya luar biasa! Cara sempurna untuk menghabiskan Sabtu pagi saya.",
       rating: 5,
-      image: "https://i.pravatar.cc/150?img=1",
+      image: "https://pbs.twimg.com/profile_images/1897949460338294785/n_f3Pnzp_400x400.jpg",
     },
     {
       name: "Hamdani Rahmat",
       text: "Pilihan pencucian ramah lingkungan dan kopi organik menjadikan ini tempat favorit saya. Sangat merekomendasikan kombinasi cucian premium dan latte!",
       rating: 5,
-      image: "https://i.pravatar.cc/150?img=2",
+      image: "https://scontent-cgk2-2.xx.fbcdn.net/v/t39.30808-1/474067715_122136378470451330_4644120900286871607_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=111fe6&_nc_eui2=AeG1epi0WAY2CoHvtZFheQ2xf_rny9m1vh1_-ufL2bW-HYPFTH_0gDwqrupkqigIIjDoPzvgK7g17boqvqnjliYo&_nc_ohc=S33Z9EQ4QoMQ7kNvgE7-6pk&_nc_oc=Adn5nzBTSTGKKd9hTrV5toNFOyOgiTMXSoFtFAZG4tqbIMSMynWw0Uw6DJRwdyZ7wjE&_nc_zt=24&_nc_ht=scontent-cgk2-2.xx&_nc_gid=b-uePCuWIza_kdzWToH43w&oh=00_AYFEtRlZ5TVqcoYPMlnAXZuUfNMwxtV-SLx1WZ7K1K60Pg&oe=67E439F7",
     },
     {
       name: "Wulan Putri",
       text: "Layanan hebat, staf yang ramah, dan kue-kue lezat. Saya datang ke sini bahkan ketika mobil saya tidak perlu dicuci!",
       rating: 4,
-      image: "https://i.pravatar.cc/150?img=3",
+      image: "https://pbs.twimg.com/profile_images/1862894642938679296/6gkkqnV2_400x400.jpg",
     },
     {
       name: "Budi Santoso",
       text: "Tempat yang sempurna untuk bersantai sambil menunggu mobil dicuci. Suasananya nyaman dan kopi mereka luar biasa!",
       rating: 5,
-      image: "https://i.pravatar.cc/150?img=4",
+      image: "https://pbs.twimg.com/profile_images/1900106187401814016/0VVuxKhY_400x400.jpg",
     },
   ];
 

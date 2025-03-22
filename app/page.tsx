@@ -4,7 +4,7 @@ import BusinessProfile from "@/components/business-profile"
 export const metadata: Metadata = {
   title: "Tharuh | Chill & Space",
   description:
-    "Experience the perfect blend of car care and coffee culture at Tharuh - where your vehicle gets pampered while you relax with premium beverages and snacks.",
+    "Nikmati aroma dan rasa kopi selagi melihat mobil anda semakin bersih",
 }
 
 export default function Home() {
