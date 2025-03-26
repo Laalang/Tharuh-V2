@@ -150,26 +150,26 @@ export default function BusinessProfile() {
 
   const testimonials = [
     {
-      name: "Dea Salsabila",
-      text: "Mobil saya tidak pernah sebersih ini dan kopinya luar biasa! Cara sempurna untuk menghabiskan Sabtu pagi saya.",
+      name: "Dian, Mahasiswi",
+      text: "Tempat ini tuh bener-bener pas banget buat nugas atau sekadar ngobrol santai sama teman. Suasananya tenang, tapi nggak bikin ngantuk. Ditambah kopinya enak banget, bikin betah lama-lama di sini!",
       rating: 5,
       image: "https://pbs.twimg.com/profile_images/1897949460338294785/n_f3Pnzp_400x400.jpg",
     },
     {
-      name: "Hamdani Rahmat",
-      text: "Pilihan pencucian ramah lingkungan dan kopi organik menjadikan ini tempat favorit saya. Sangat merekomendasikan kombinasi cucian premium dan latte!",
+      name: "Raka, Freelancer",
+      text: "Tharuh Chill and Space jadi tempat favoritku buat kerja. Banyak colokan, Wi-Fi-nya stabil, dan suasana ruang terbukanya bikin ide ngalir terus. Plus, motor dicuci sambil kerja, produktif banget rasanya!",
       rating: 5,
       image: "https://scontent-cgk2-2.xx.fbcdn.net/v/t39.30808-1/474067715_122136378470451330_4644120900286871607_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=111fe6&_nc_eui2=AeG1epi0WAY2CoHvtZFheQ2xf_rny9m1vh1_-ufL2bW-HYPFTH_0gDwqrupkqigIIjDoPzvgK7g17boqvqnjliYo&_nc_ohc=S33Z9EQ4QoMQ7kNvgE7-6pk&_nc_oc=Adn5nzBTSTGKKd9hTrV5toNFOyOgiTMXSoFtFAZG4tqbIMSMynWw0Uw6DJRwdyZ7wjE&_nc_zt=24&_nc_ht=scontent-cgk2-2.xx&_nc_gid=b-uePCuWIza_kdzWToH43w&oh=00_AYFEtRlZ5TVqcoYPMlnAXZuUfNMwxtV-SLx1WZ7K1K60Pg&oe=67E439F7",
     },
     {
-      name: "Wulan Putri",
-      text: "Layanan hebat, staf yang ramah, dan kue-kue lezat. Saya datang ke sini bahkan ketika mobil saya tidak perlu dicuci!",
+      name: "Intan & Fajar, Mahasiswa",
+      text: "Rasanya spesial bisa habisin waktu di sini. Ambiencenya bikin nyaman, apalagi kalau malam dengan lampu-lampu temaramnya. Kadang ada live music juga, jadi makin seru buat quality time",
       rating: 4,
       image: "https://pbs.twimg.com/profile_images/1862894642938679296/6gkkqnV2_400x400.jpg",
     },
     {
-      name: "Budi Santoso",
-      text: "Tempat yang sempurna untuk bersantai sambil menunggu mobil dicuci. Suasananya nyaman dan kopi mereka luar biasa!",
+      name: "Bayu, Barber",
+      text: "Setelah hari yang sibuk, Tharuh Chill and Space jadi tempat andalan buat ngadem sambil ngopi. Lokasinya strategis, nggak ribet, dan yang penting suasananya mendukung banget buat recharge energi.",
       rating: 5,
       image: "https://pbs.twimg.com/profile_images/1900106187401814016/0VVuxKhY_400x400.jpg",
     },
@@ -469,18 +469,16 @@ export default function BusinessProfile() {
                 Chill & Space
               </h2>
               <p className="text-white/70 leading-relaxed">
-                Didirikan pada tahun 2021, Tharuh Chill & Space merevolusi
-                pengalaman mencuci mobil tradisional dengan menggabungkan
-                premium perawatan kendaraan dengan suasana kafe yang canggih.
-                Konsep kami lahir dari ide sederhana: kenapa harus menunggu
-                iseng kapan Anda bisa menikmati kopi dan makanan yang
-                baru dipanggang?
+                Tharuh Chill & Space menawarkan suasana yang modern dan ruang terbuka
+                yang sejuk. menciptakan tempat dimana obrolan santai dan momen produktif
+                bisa berjalan beriringan.
               </p>
               <p className="text-white/70 leading-relaxed">
-                Kami menggunakan produk pembersih ramah lingkungan dan peralatan
-                hemat energi untuk layanan cuci mobil kami kafe kami menggunakan
-                bahan-bahan organik yang diproduksi secara lokal bila
-                memungkinkan.
+                Lebih dari sekedar Coffee Shop, tempat ini membawa energi anak muda dengan
+                vibes yang tenang tapi tetap hidup. Sekedar datang untuk menikmati secangkir
+                kopi, bersantai sambil melihat kendaraan anda dicuci, atau sekedar mencari
+                tempat untuk melarikan diri sejenak, Tharuh Chill & Space adalah ruang 
+                sempurna untuk singgah dan menikmati waktu.
               </p>
               <div className="pt-4 flex flex-wrap gap-6">
                 <div className="flex flex-col">
