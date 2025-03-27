@@ -466,7 +466,7 @@ export default function BusinessProfile() {
                 Cerita Kami
               </Badge>
               <h2 className="text-4xl font-bold tracking-tight">
-                Chill & Space
+                Tharuh
               </h2>
               <p className="text-white/70 leading-relaxed">
                 Tharuh Chill & Space menawarkan suasana yang modern dan ruang terbuka
@@ -521,9 +521,9 @@ export default function BusinessProfile() {
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
                   <Car className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-medium mb-2">Cuci Mendetail</h3>
+                <h3 className="font-medium mb-2">Carwash</h3>
                 <p className="text-sm text-white/60">
-                  Pencucian mobil mendetail pada setiap sudut
+                  memastikan mobil anda mengkilap pada setiap sudut secara menyeluruh
                 </p>
               </CardContent>
             </Card>
@@ -533,9 +533,9 @@ export default function BusinessProfile() {
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
                   <Coffee className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-medium mb-2">Kopi Premium</h3>
+                <h3 className="font-medium mb-2">Chill & Space</h3>
                 <p className="text-sm text-white/60">
-                  Biji Kopi berkualitas khusus dan barista ahli
+                  Cafe untuk bersantai dengan menu dan service berkualitas
                 </p>
               </CardContent>
             </Card>
@@ -559,7 +559,7 @@ export default function BusinessProfile() {
                 </div>
                 <h3 className="font-medium mb-2">Lokasi Strategis</h3>
                 <p className="text-sm text-white/60">
-                  Mudah diakses dengan tempat parkir yang luas
+                  Akses yang mudah di area komersil perkotaan
                 </p>
               </CardContent>
             </Card>
