@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Badge } from "@/components/ui/badge"
 import {
   Car,
   Coffee,
@@ -21,44 +21,28 @@ import {
   Menu,
   X,
   ArrowRight,
-} from "lucide-react";
-import BackgroundPaths from "@/components/kokonutui/background-paths";
-import { CursorLight } from "@/components/cursor-light";
-import Image from "next/image";
-import Link from "next/link";
-// import { TharuhLogo } from "@/components/tharuh-logo"
+} from "lucide-react"
+import BackgroundPaths from "@/components/kokonutui/background-paths"
+import { CursorLight } from "@/components/cursor-light"
+import Image from "next/image"
+import Link from "next/link"
 
 const TharuhLogo = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="32" height="32" rx="16" fill="#1E3A8A" />
-    <path
-      d="M8 20C8 22.2091 9.79086 24 12 24H20C22.2091 24 24 22.2091 24 20V16H8V20Z"
-      fill="#60A5FA"
-    />
-    <path
-      d="M24 16V12C24 9.79086 22.2091 8 20 8H12C9.79086 8 8 9.79086 8 12V16H24Z"
-      fill="#93C5FD"
-    />
+    <path d="M8 20C8 22.2091 9.79086 24 12 24H20C22.2091 24 24 22.2091 24 20V16H8V20Z" fill="#60A5FA" />
+    <path d="M24 16V12C24 9.79086 22.2091 8 20 8H12C9.79086 8 8 9.79086 8 12V16H24Z" fill="#93C5FD" />
     <circle cx="16" cy="16" r="4" fill="#1E3A8A" />
-    <path
-      d="M13 11C13 9.34315 14.3431 8 16 8V8C17.6569 8 19 9.34315 19 11V16H13V11Z"
-      fill="#BFDBFE"
-    />
+    <path d="M13 11C13 9.34315 14.3431 8 16 8V8C17.6569 8 19 9.34315 19 11V16H13V11Z" fill="#BFDBFE" />
   </svg>
-);
+)
 
 export default function BusinessProfile() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-  const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("home")
+  const { scrollYProgress } = useScroll()
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95])
 
   // First, add the necessary state and handler functions at the top of the component
   // Add these after the existing useState declarations:
@@ -67,37 +51,32 @@ export default function BusinessProfile() {
     email: "",
     subject: "",
     message: "",
-  });
+  })
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     error: false,
     message: "",
-  });
+  })
 
   const handleInputChange = (e) => {
-    const { id, value } = e.target;
+    const { id, value } = e.target
     setFormData((prev) => ({
       ...prev,
       [id]: value,
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     // Validate form
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.subject ||
-      !formData.message
-    ) {
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       setFormStatus({
         submitted: false,
         error: true,
         message: "Please fill in all fields",
-      });
-      return;
+      })
+      return
     }
 
     // Simulate form submission
@@ -105,7 +84,7 @@ export default function BusinessProfile() {
       submitted: true,
       error: false,
       message: "Thank you for your message! We will get back to you soon.",
-    });
+    })
 
     // Reset form after successful submission
     setFormData({
@@ -113,40 +92,37 @@ export default function BusinessProfile() {
       email: "",
       subject: "",
       message: "",
-    });
+    })
 
     // In a real application, you would send the form data to a server here
-  };
+  }
 
   // Handle scroll to set active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      const scrollPosition = window.scrollY + 300;
+      const sections = document.querySelectorAll("section")
+      const scrollPosition = window.scrollY + 300
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute("id");
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.offsetHeight
+        const sectionId = section.getAttribute("id")
 
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
-        ) {
-          setActiveSection(sectionId || "home");
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          setActiveSection(sectionId || "home")
         }
-      });
-    };
+      })
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   // Toggle dark mode class on body
   useEffect(() => {
-    document.body.classList.add("dark");
-    return () => document.body.classList.remove("dark");
-  }, []);
+    document.body.classList.add("dark")
+    return () => document.body.classList.remove("dark")
+  }, [])
 
   const testimonials = [
     {
@@ -159,13 +135,15 @@ export default function BusinessProfile() {
       name: "Raka, Freelancer",
       text: "Tharuh Chill and Space jadi tempat favoritku buat kerja. Banyak colokan, Wi-Fi-nya stabil, dan suasana ruang terbukanya bikin ide ngalir terus. Plus, motor dicuci sambil kerja, produktif banget rasanya!",
       rating: 5,
-      image: "https://scontent-cgk2-2.xx.fbcdn.net/v/t39.30808-1/474067715_122136378470451330_4644120900286871607_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=111fe6&_nc_eui2=AeG1epi0WAY2CoHvtZFheQ2xf_rny9m1vh1_-ufL2bW-HYPFTH_0gDwqrupkqigIIjDoPzvgK7g17boqvqnjliYo&_nc_ohc=S33Z9EQ4QoMQ7kNvgE7-6pk&_nc_oc=Adn5nzBTSTGKKd9hTrV5toNFOyOgiTMXSoFtFAZG4tqbIMSMynWw0Uw6DJRwdyZ7wjE&_nc_zt=24&_nc_ht=scontent-cgk2-2.xx&_nc_gid=b-uePCuWIza_kdzWToH43w&oh=00_AYFEtRlZ5TVqcoYPMlnAXZuUfNMwxtV-SLx1WZ7K1K60Pg&oe=67E439F7",
+      image:
+        "https://scontent-cgk2-2.xx.fbcdn.net/v/t39.30808-1/474067715_122136378470451330_4644120900286871607_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=111fe6&_nc_eui2=AeG1epi0WAY2CoHvtZFheQ2xf_rny9m1vh1_-ufL2bW-HYPFTH_0gDwqrupkqigIIjDoPzvgK7g17boqvqnjliYo&_nc_ohc=S33Z9EQ4QoMQ7kNvgE7-6pk&_nc_oc=Adn5nzBTSTGKKd9hTrV5toNFOyOgiTMXSoFtFAZG4tqbIMSMynWw0Uw6DJRwdyZ7wjE&_nc_zt=24&_nc_ht=scontent-cgk2-2.xx&_nc_gid=b-uePCuWIza_kdzWToH43w&oh=00_AYFEtRlZ5TVqcoYPMlnAXZuUfNMwxtV-SLx1WZ7K1K60Pg&oe=67E439F7",
     },
     {
       name: "Intan & Fajar, Mahasiswa",
       text: "Rasanya spesial bisa habisin waktu di sini. Ambiencenya bikin nyaman, apalagi kalau malam dengan lampu-lampu temaramnya. Kadang ada live music juga, jadi makin seru buat quality time",
       rating: 4,
-      image: "https://pbs.twimg.com/profile_images/1862894642938679296/6gkkqnV2_400x400.jpg",
+      image:
+        "https://smb.kamdesain.com/wp-content/uploads/2024/08/5-Tipe-Mahasiswa-di-Kampus-Kupu-kupu-hingga-Kunang-kunang.jpg",
     },
     {
       name: "Bayu, Barber",
@@ -173,36 +151,32 @@ export default function BusinessProfile() {
       rating: 5,
       image: "https://pbs.twimg.com/profile_images/1900106187401814016/0VVuxKhY_400x400.jpg",
     },
-  ];
+  ]
 
   const services = {
     carwash: [
       {
         name: "Paket Express",
         price: "55k",
-        description:
-          "Pencucian eksterior cepat dengan bilas bebas noda, membersihakan debu eksterior",
+        description: "Pencucian eksterior cepat dengan bilas bebas noda, membersihakan debu eksterior",
         time: "10 min",
       },
       {
         name: "Paket Deluxe",
         price: "75k",
-        description:
-          "Pencucian eksterior, semir ban, dan membersikah debu interior",
+        description: "Pencucian eksterior, semir ban, dan membersikah debu interior",
         time: "20 min",
       },
       {
         name: "Paket Premium",
         price: "80k",
-        description:
-          "Lengkapi pembersihan interior dan eksterior dengan perlindungan lilin",
+        description: "Lengkapi pembersihan interior dan eksterior dengan perlindungan lilin",
         time: "45 min",
       },
       {
-        name: "Paket Kilap",
+        name: "paket Super",
         price: "95k",
-        description:
-          "Detail lengkap dengan wax premium, pengkondisian interior, dan pembersihan uap",
+        description: "Detail lengkap dengan wax premium, pengkondisian interior, dan pembersihan uap",
         time: "90 min",
       },
     ],
@@ -214,59 +188,58 @@ export default function BusinessProfile() {
         category: "Drinks",
       },
       {
-        name: "Milk Based",
-        price: "15k - 18k",
-        description: "Varian olahan susu",
-        category: "Drinks",
-      },
-      {
         name: "Tea Based",
         price: "9k - 14k",
         description: "Varian olahan teh",
         category: "Drinks",
       },
       {
+        name: "Milk Based",
+        price: "15k - 18k",
+        description: "Varian olahan susu",
+        category: "Drinks",
+      },
+      {
         name: "Snack",
         price: "8k - 15k",
-        description:
-          "Variasi jajanan snack",
+        description: "Varian jajanan snack",
         category: "Food",
       },
     ],
-  };
+  }
 
   const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
+    const aboutSection = document.getElementById("about")
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
+      aboutSection.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
+    const contactSection = document.getElementById("contact")
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
+      contactSection.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
 
   const galleryImages = [
     {
       src: "https://i.imgur.com/P0jqn82.jpeg",
-      alt: "Coffee on the table",
+      alt: "Car being washed",
     },
     {
       src: "https://i.imgur.com/WlOsY10.jpeg",
-      alt: "Haha hihi",
+      alt: "Coffee being poured",
     },
     {
       src: "https://i.imgur.com/5Oe4oyJ.jpeg",
-      alt: "interior",
+      alt: "Car interior detailing",
     },
     {
       src: "https://i.imgur.com/E1yNlSI.jpeg",
       alt: "Cafe atmosphere",
     },
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-neutral-950 text-white overflow-hidden">
@@ -293,47 +266,41 @@ export default function BusinessProfile() {
             </Button>
           </div>
           <nav className="flex flex-col gap-6 text-xl">
-            {["home", "about", "services", "gallery", "contact"].map(
-              (section) => (
-                <a
-                  key={section}
-                  href={`#${section}`}
-                  className="flex items-center gap-2 py-3 border-b border-white/10 hover:text-primary transition-colors"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    const element = document.getElementById(section);
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  <span className="capitalize">{section}</span>
-                  <ArrowRight className="h-4 w-4 ml-auto" />
-                </a>
-              )
-            )}
+            {["home", "about", "services", "gallery", "contact"].map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                className="flex items-center gap-2 py-3 border-b border-white/10 hover:text-primary transition-colors"
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  const element = document.getElementById(section)
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
+              >
+                <span className="capitalize">{section}</span>
+                <ArrowRight className="h-4 w-4 ml-auto" />
+              </a>
+            ))}
+            <Link
+              href="/menu"
+              className="flex items-center gap-2 py-3 border-b border-white/10 hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <span>Menu</span>
+              <ArrowRight className="h-4 w-4 ml-auto" />
+            </Link>
           </nav>
           <div className="mt-auto">
             <div className="flex gap-4 mb-6">
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-white/20 hover:bg-white/10"
-              >
+              <Button variant="outline" size="icon" className="rounded-full border-white/20 hover:bg-white/10">
                 <Instagram className="h-5 w-5" />
               </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-white/20 hover:bg-white/10"
-              >
+              <Button variant="outline" size="icon" className="rounded-full border-white/20 hover:bg-white/10">
                 <Facebook className="h-5 w-5" />
               </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-white/20 hover:bg-white/10"
-              >
+              <Button variant="outline" size="icon" className="rounded-full border-white/20 hover:bg-white/10">
                 <Twitter className="h-5 w-5" />
               </Button>
             </div>
@@ -359,34 +326,32 @@ export default function BusinessProfile() {
           </motion.div>
 
           <nav className="hidden md:flex items-center gap-8">
-            {["home", "about", "services", "gallery", "contact"].map(
-              (section) => (
-                <motion.a
-                  key={section}
-                  href={`#${section}`}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    delay:
-                      0.1 *
-                      [
-                        "home",
-                        "about",
-                        "services",
-                        "gallery",
-                        "contact",
-                      ].indexOf(section),
-                  }}
-                  className={`text-sm font-medium hover:text-primary transition-colors ${
-                    activeSection === section ? "text-primary" : "text-white/80"
-                  }`}
-                >
-                  <span className="capitalize">{section}</span>
-                </motion.a>
-              )
-            )}
+            {["home", "about", "services", "gallery", "contact"].map((section) => (
+              <motion.a
+                key={section}
+                href={`#${section}`}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.1 * ["home", "about", "services", "gallery", "contact"].indexOf(section),
+                }}
+                className={`text-sm font-medium hover:text-primary transition-colors ${activeSection === section ? "text-primary" : "text-white/80"}`}
+              >
+                <span className="capitalize">{section}</span>
+              </motion.a>
+            ))}
           </nav>
+
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <Link href="/menu" className="text-sm font-medium hover:text-primary transition-colors text-white/80">
+              <span>Menu</span>
+            </Link>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -415,18 +380,9 @@ export default function BusinessProfile() {
       </header>
 
       {/* Hero Section */}
-      <section
-        id="home"
-        className="relative h-screen flex items-center justify-center"
-      >
-        <BackgroundPaths
-          title="Tharuh Chill & Space"
-          onDiscoverClick={scrollToAbout}
-        />
-        <motion.div
-          style={{ opacity, scale }}
-          className="absolute bottom-10 left-0 right-0 flex justify-center"
-        >
+      <section id="home" className="relative h-screen flex items-center justify-center">
+        <BackgroundPaths title="Tharuh Chill & Space" onDiscoverClick={scrollToAbout} />
+        <motion.div style={{ opacity, scale }} className="absolute bottom-10 left-0 right-0 flex justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -462,23 +418,17 @@ export default function BusinessProfile() {
             className="grid md:grid-cols-2 gap-12 items-center"
           >
             <div className="space-y-6">
-              <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">
-                Cerita Kami
-              </Badge>
-              <h2 className="text-4xl font-bold tracking-tight">
-                Tharuh
-              </h2>
+              <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">Cerita Kami</Badge>
+              <h2 className="text-4xl font-bold tracking-tight">Tharuh</h2>
               <p className="text-white/70 leading-relaxed">
-                Tharuh Chill & Space menawarkan suasana yang modern dan ruang terbuka
-                yang sejuk. menciptakan tempat dimana obrolan santai dan momen produktif
-                bisa berjalan beriringan.
+                Tharuh Chill & Space menawarkan suasana yang modern dan ruang terbuka yang sejuk. menciptakan tempat
+                dimana obrolan santai dan momen produktif bisa berjalan beriringan.
               </p>
               <p className="text-white/70 leading-relaxed">
-                Lebih dari sekedar Coffee Shop, tempat ini membawa energi anak muda dengan
-                vibes yang tenang tapi tetap hidup. Sekedar datang untuk menikmati secangkir
-                kopi, bersantai sambil melihat kendaraan anda dicuci, atau sekedar mencari
-                tempat untuk melarikan diri sejenak, Tharuh Chill & Space adalah ruang 
-                sempurna untuk singgah dan menikmati waktu.
+                Lebih dari sekedar Coffee Shop, tempat ini membawa energi anak muda dengan vibes yang tenang tapi tetap
+                hidup. Sekedar datang untuk menikmati secangkir kopi, bersantai sambil melihat kendaraan anda dicuci,
+                atau sekedar mencari tempat untuk melarikan diri sejenak, Tharuh Chill & Space adalah ruang sempurna
+                untuk singgah dan menikmati waktu.
               </p>
               <div className="pt-4 flex flex-wrap gap-6">
                 <div className="flex flex-col">
@@ -491,7 +441,7 @@ export default function BusinessProfile() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-3xl font-bold text-primary">4.9</span>
-                  <span className="text-sm text-white/60">Penilaian Customer</span>
+                  <span className="text-sm text-white/60">Customer Rating</span>
                 </div>
               </div>
             </div>
@@ -499,7 +449,7 @@ export default function BusinessProfile() {
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                 <Image
                   src="https://i.imgur.com/rctHizo.jpeg"
-                  alt="Tharuh Chill & Space"
+                  alt="THARUH CHILL & Space"
                   width={800}
                   height={600}
                   className="w-full h-auto object-cover"
@@ -534,9 +484,7 @@ export default function BusinessProfile() {
                   <Coffee className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-medium mb-2">Chill & Space</h3>
-                <p className="text-sm text-white/60">
-                  Cafe untuk bersantai dengan menu dan service berkualitas
-                </p>
+                <p className="text-sm text-white/60">Cafe untuk bersantai dengan menu dan service berkualitas</p>
               </CardContent>
             </Card>
 
@@ -546,9 +494,7 @@ export default function BusinessProfile() {
                   <Clock className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-medium mb-2">Layanan Efisien</h3>
-                <p className="text-sm text-white/60">
-                  Proses yang efisien untuk meminimalkan waktu tunggu
-                </p>
+                <p className="text-sm text-white/60">Proses yang efisien untuk meminimalkan waktu tunggu</p>
               </CardContent>
             </Card>
 
@@ -558,9 +504,7 @@ export default function BusinessProfile() {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-medium mb-2">Lokasi Strategis</h3>
-                <p className="text-sm text-white/60">
-                  Akses yang mudah di area komersil perkotaan
-                </p>
+                <p className="text-sm text-white/60">Akses yang mudah di area komersil perkotaan</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -577,16 +521,11 @@ export default function BusinessProfile() {
             viewport={{ once: true, margin: "-100px" }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">
-              Layanan Kami
-            </Badge>
-            <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Layanan Terbaik bagi Anda dan Mobil Anda
-            </h2>
+            <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">Layanan kami</Badge>
+            <h2 className="text-4xl font-bold tracking-tight mb-4">Layanan Terbaik bagi Anda dan Mobil Anda</h2>
             <p className="text-white/70">
-              Perpaduan sempurna antara perawatan mobil dan kafe. Kami
-              menawarkan layanan komprehensif untuk menjaga Anda kendaraan murni
-              sambil menikmati minuman berkualitas.
+              Perpaduan sempurna antara perawatan mobil dan budaya kafe. Kami menawarkan layanan komprehensif untuk
+              menjaga Anda kendaraan murni sambil menikmati minuman berkualitas.
             </p>
           </motion.div>
 
@@ -629,14 +568,9 @@ export default function BusinessProfile() {
                             <h3 className="font-medium text-lg group-hover:text-primary transition-colors">
                               {service.name}
                             </h3>
-                            <p className="text-white/60 text-sm">
-                              {service.description}
-                            </p>
+                            <p className="text-white/60 text-sm">{service.description}</p>
                           </div>
-                          <Badge
-                            variant="outline"
-                            className="border-primary/30 text-primary"
-                          >
+                          <Badge variant="outline" className="border-primary/30 text-primary">
                             {service.price}
                           </Badge>
                         </div>
@@ -672,14 +606,9 @@ export default function BusinessProfile() {
                             <h3 className="font-medium text-lg group-hover:text-primary transition-colors">
                               {item.name}
                             </h3>
-                            <p className="text-white/60 text-sm">
-                              {item.description}
-                            </p>
+                            <p className="text-white/60 text-sm">{item.description}</p>
                           </div>
-                          <Badge
-                            variant="outline"
-                            className="border-primary/30 text-primary"
-                          >
+                          <Badge variant="outline" className="border-primary/30 text-primary">
                             {item.price}
                           </Badge>
                         </div>
@@ -699,16 +628,22 @@ export default function BusinessProfile() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="flex justify-center mt-12"
+            className="flex justify-center gap-4 mt-12"
           >
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
               onClick={scrollToContact}
             >
-              Booking Sekarang
+              Booking Sekarang!
               <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
+            <Link href="/menu">
+              <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10">
+                View Full Menu
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -723,15 +658,9 @@ export default function BusinessProfile() {
             viewport={{ once: true, margin: "-100px" }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">
-              Galeri
-            </Badge>
-            <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Testimonials
-            </h2>
-            <p className="text-white/70">
-              Dengarkan langsung pendapat dari customer kami
-            </p>
+            <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">Galeri</Badge>
+            <h2 className="text-4xl font-bold tracking-tight mb-4">Testimonials</h2>
+            <p className="text-white/70">Dengarkan langsung pendapat dari customer kami</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -749,17 +678,11 @@ export default function BusinessProfile() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-4 w-4 ${
-                            i < testimonial.rating
-                              ? "text-yellow-500 fill-yellow-500"
-                              : "text-neutral-600"
-                          }`}
+                          className={`h-4 w-4 ${i < testimonial.rating ? "text-yellow-500 fill-yellow-500" : "text-neutral-600"}`}
                         />
                       ))}
                     </div>
-                    <p className="text-white/80 italic mb-6 flex-grow">
-                      {testimonial.text}
-                    </p>
+                    <p className="text-white/80 italic mb-6 flex-grow">{testimonial.text}</p>
                     <div className="flex items-center gap-3">
                       <Image
                         src={testimonial.image || "/placeholder.svg"}
@@ -798,9 +721,7 @@ export default function BusinessProfile() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <span className="text-white font-medium">
-                    Tharuh Experience
-                  </span>
+                  <span className="text-white font-medium">Tharuh Experience</span>
                 </div>
               </motion.div>
             ))}
@@ -809,10 +730,7 @@ export default function BusinessProfile() {
       </section>
 
       {/* Contact Section */}
-      <section
-        id="contact"
-        className="py-24 bg-neutral-950 relative overflow-hidden"
-      >
+      <section id="contact" className="py-24 bg-neutral-950 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <BackgroundPaths title="" showButton={false} />
         </div>
@@ -825,16 +743,11 @@ export default function BusinessProfile() {
             className="grid md:grid-cols-2 gap-12 items-center"
           >
             <div className="space-y-6">
-              <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">
-                Hubungi Kami
-              </Badge>
-              <h2 className="text-4xl font-bold tracking-tight">
-                Menjadi bagian dari Tharuh Chill & Space
-              </h2>
+              <Badge className="bg-primary/20 text-primary hover:bg-primary/30 mb-4">Hubungi Kami</Badge>
+              <h2 className="text-4xl font-bold tracking-tight">Jadi bagian dari Tharuh Chill & Space</h2>
               <p className="text-white/70">
-                Kunjungi kami hari ini atau hubungi kami untuk mempelajari lebih
-                lanjut tentang layanan kami. Kami berlokasi strategis dan siap
-                melakukannya melayani Anda dan kendaraan Anda.
+                Kunjungi kami hari ini atau hubungi kami untuk mempelajari lebih lanjut tentang layanan kami. Kami
+                berlokasi strategis dan siap melakukannya melayani Anda dan kendaraan Anda.
               </p>
 
               <div className="space-y-4 pt-4">
@@ -844,9 +757,7 @@ export default function BusinessProfile() {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Lokasi</h3>
-                    <p className="text-white/70">
-                      Jl. Tidar, Kloncing, Karangrejo, Kec. Sumbersari, Jember
-                    </p>
+                    <p className="text-white/70">Jl. Tidar, Kloncing, Karangrejo, Kec. Sumbersari, Jember</p>
                   </div>
                 </div>
 
@@ -855,7 +766,7 @@ export default function BusinessProfile() {
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Jam</h3>
+                    <h3 className="font-medium mb-1">Jam Kerja</h3>
                     <p className="text-white/70">24/7</p>
                   </div>
                 </div>
@@ -882,16 +793,8 @@ export default function BusinessProfile() {
               </div>
 
               <div className="pt-6 flex gap-4">
-                <Link
-                  href="https://www.instagram.com/tharuh.cs/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-white/20 hover:bg-white/10"
-                  >
+                <Link href="https://www.instagram.com/tharuh.cs/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="icon" className="rounded-full border-white/20 hover:bg-white/10">
                     <Instagram className="h-5 w-5" />
                   </Button>
                 </Link>
@@ -957,20 +860,13 @@ export default function BusinessProfile() {
                       required
                     />
                   </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                  >
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                     Send Message
                   </Button>
 
                   {formStatus.message && (
                     <div
-                      className={`mt-4 p-3 rounded-md ${
-                        formStatus.error
-                          ? "bg-red-500/20 text-red-200"
-                          : "bg-green-500/20 text-green-200"
-                      }`}
+                      className={`mt-4 p-3 rounded-md ${formStatus.error ? "bg-red-500/20 text-red-200" : "bg-green-500/20 text-green-200"}`}
                     >
                       {formStatus.message}
                     </div>
@@ -989,8 +885,7 @@ export default function BusinessProfile() {
             <div className="space-y-4">
               <h3 className="text-lg font-bold">Tharuh Chill & Space</h3>
               <p className="text-sm text-white/60">
-                Perpaduan sempuran antara carwash dan cafe, memberikan layanan
-                terbaik serta produk premium.
+                Perpaduan sempuran antara carwash dan cafe, memberikan layanan terbaik serta produk premium.
               </p>
             </div>
 
@@ -998,42 +893,27 @@ export default function BusinessProfile() {
               <h3 className="text-lg font-bold">Quick Links</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link
-                    href="#home"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#home" className="text-white/60 hover:text-primary transition-colors">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#about"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#about" className="text-white/60 hover:text-primary transition-colors">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#services"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#services" className="text-white/60 hover:text-primary transition-colors">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#gallery"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#gallery" className="text-white/60 hover:text-primary transition-colors">
                     Gallery
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#contact"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#contact" className="text-white/60 hover:text-primary transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -1044,42 +924,27 @@ export default function BusinessProfile() {
               <h3 className="text-lg font-bold">Services</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link
-                    href="#"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#" className="text-white/60 hover:text-primary transition-colors">
                     Express Wash
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#" className="text-white/60 hover:text-primary transition-colors">
                     Deluxe Wash
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#" className="text-white/60 hover:text-primary transition-colors">
                     Premium Detail
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#" className="text-white/60 hover:text-primary transition-colors">
                     Café Menu
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
+                  <Link href="#" className="text-white/60 hover:text-primary transition-colors">
                     Loyalty Program
                   </Link>
                 </li>
@@ -1087,35 +952,23 @@ export default function BusinessProfile() {
             </div>
           </div>
           <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-white/60">
-              © {new Date().getFullYear()} Tharuh. All rights reserved.
-            </p>
+            <p className="text-xs text-white/60">© {new Date().getFullYear()} Tharuh. All rights reserved.</p>
             <div className="flex gap-4">
-              <Link
-                href="#"
-                className="text-xs text-white/60 hover:text-primary transition-colors"
-              >
+              <Link href="#" className="text-xs text-white/60 hover:text-primary transition-colors">
                 Privacy Policy
               </Link>
-              <Link
-                href="#"
-                className="text-xs text-white/60 hover:text-primary transition-colors"
-              >
+              <Link href="#" className="text-xs text-white/60 hover:text-primary transition-colors">
                 Terms of Service
               </Link>
-              <Link
-                href="#"
-                className="text-xs text-white/60 hover:text-primary transition-colors"
-              >
+              <Link href="#" className="text-xs text-white/60 hover:text-primary transition-colors">
                 Sitemap
               </Link>
             </div>
-            <p className="text-xs text-white/60">
-               {new Date().getFullYear()} Made by Galang.
-            </p>
+            <p className="text-xs text-white/60">{new Date().getFullYear()} Made by Galang.</p>
           </div>
         </div>
       </footer>
     </div>
-  );
+  )
 }
+

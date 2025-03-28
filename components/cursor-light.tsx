@@ -1,9 +1,9 @@
 "use client"
 
-import type React from "react"
+import type { FC } from "react"
 import { useState, useEffect } from "react"
 
-export const CursorLight: React.FC = () => {
+export const CursorLight: FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
