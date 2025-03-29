@@ -30,7 +30,7 @@ export type MenuItem = {
     {
       id: "espresso",
       name: "Espresso",
-      description: "Shot kopi murni dengan crema yang kaya",
+      description: "Ekstrak biji kopi murni dengan crema yang kaya",
       price: { hot: "12k", cold: "-" },
       image: "https://images.unsplash.com/photo-1610889556528-9a770e32642f?q=80&w=1915&auto=format&fit=crop",
       tags: ["hot", "coffee", "espresso-based"],
@@ -48,7 +48,7 @@ export type MenuItem = {
     {
       id: "americano",
       name: "Americano",
-      description: "Espresso dengan tambahan air panas",
+      description: "Espresso dengan tambahan air",
       price: { hot: "14k", cold: "16k" },
       image: "https://images.unsplash.com/photo-1551030173-122aabc4489c?q=80&w=1887&auto=format&fit=crop",
       tags: ["hot", "cold", "coffee", "espresso-based"],
@@ -57,7 +57,7 @@ export type MenuItem = {
     {
       id: "affogato",
       name: "Affogato",
-      description: "Espresso dituang di atas es krim vanilla",
+      description: "Sajian ice cream vanilla yang disiram dengan espresso",
       price: { hot: "-", cold: "17k" },
       image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?q=80&w=1887&auto=format&fit=crop",
       tags: ["cold", "coffee", "dessert", "espresso-based"],
@@ -66,7 +66,7 @@ export type MenuItem = {
     {
       id: "ice-shaken-espresso",
       name: "Ice Shaken Espresso",
-      description: "Espresso dikocok dengan es untuk tekstur yang lebih ringan",
+      description: "Espresso dan madu yang dikocok untuk menghasilkan tekstur yang ringan",
       price: { hot: "-", cold: "17k" },
       image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1769&auto=format&fit=crop",
       tags: ["cold", "coffee", "refreshing", "espresso-based"],
@@ -84,7 +84,7 @@ export type MenuItem = {
     {
       id: "gibraltar",
       name: "Gibraltar",
-      description: "Espresso dengan sedikit steamed milk, disajikan dalam gelas kecil",
+      description: "Double shoot espresso dengan steam milk yang disajikan dalam gelas kecil",
       price: { hot: "18k", cold: "-" },
       image: "https://images.unsplash.com/photo-1577590835286-1cdd24c08fd5?q=80&w=1965&auto=format&fit=crop",
       tags: ["hot", "coffee", "milk", "espresso-based"],
@@ -187,7 +187,7 @@ export type MenuItem = {
     {
       id: "v60-local-beans",
       name: "V60 Local Beans",
-      description: "Kopi diseduh dengan metode V60 menggunakan biji lokal",
+      description: "Metode pour over menggunakan v60 dengan beans lokal",
       price: { hot: "18k", cold: "18k" },
       image: "https://images.unsplash.com/photo-1515283709260-ee29296f1534?q=80&w=1974&auto=format&fit=crop",
       tags: ["hot", "cold", "coffee", "local", "manual-brew"],
@@ -196,7 +196,7 @@ export type MenuItem = {
     {
       id: "v60-guest-beans",
       name: "V60 Guest Beans",
-      description: "Kopi diseduh dengan metode V60 menggunakan biji spesial",
+      description: "Metode pour over menggunakan v60 dengan beans spesial",
       price: { hot: "23k", cold: "23k" },
       image: "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=1770&auto=format&fit=crop",
       tags: ["hot", "cold", "coffee", "premium", "manual-brew"],
@@ -225,7 +225,7 @@ export type MenuItem = {
     {
       id: "taro-milk",
       name: "Taro",
-      description: "Susu dengan bubuk taro",
+      description: "Susu dengan bubuk taro premium",
       price: { hot: "15k", cold: "17k" },
       image: "https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?q=80&w=1770&auto=format&fit=crop",
       tags: ["hot", "cold", "milk", "sweet", "milk-based"],
@@ -234,7 +234,7 @@ export type MenuItem = {
     {
       id: "matcha-berry",
       name: "Matcha Berry",
-      description: "Susu matcha dengan sirup strawberry",
+      description: "Matcha, susu dan sirup strawberry",
       price: { hot: "-", cold: "18k" },
       image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?q=80&w=1965&auto=format&fit=crop",
       tags: ["cold", "milk", "fruity", "japanese", "milk-based"],
@@ -243,7 +243,7 @@ export type MenuItem = {
     {
       id: "choco-berry",
       name: "Choco Berry",
-      description: "Susu cokelat dengan sirup strawberry",
+      description: "Chocolate, susu, dan sirup strawberry",
       price: { hot: "-", cold: "18k" },
       image: "https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=1769&auto=format&fit=crop",
       tags: ["cold", "milk", "fruity", "sweet", "milk-based"],
@@ -252,7 +252,7 @@ export type MenuItem = {
     {
       id: "choco-hazelnut",
       name: "Choco Hazelnut",
-      description: "Susu cokelat dengan sirup hazelnut",
+      description: "Chocolate, susu dan sirup hazelnut",
       price: { hot: "-", cold: "18k" },
       image: "https://images.unsplash.com/photo-1572286258217-215b98b27b99?q=80&w=1887&auto=format&fit=crop",
       tags: ["cold", "milk", "nutty", "sweet", "milk-based"],
@@ -261,7 +261,7 @@ export type MenuItem = {
     {
       id: "choco-banana",
       name: "Choco Banana",
-      description: "Susu cokelat dengan sirup pisang",
+      description: "Chocolate, susu dan sirup pisang",
       price: { hot: "-", cold: "18k" },
       image: "https://images.unsplash.com/photo-1553787499-6f9133242821?q=80&w=1887&auto=format&fit=crop",
       tags: ["cold", "milk", "fruity", "sweet", "milk-based"],
@@ -272,7 +272,7 @@ export type MenuItem = {
     {
       id: "ice-tea",
       name: "Ice Tea",
-      description: "Teh hitam diseduh segar",
+      description: "Seduhan black tea",
       price: { hot: "9k", cold: "10k" },
       image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=1887&auto=format&fit=crop",
       tags: ["hot", "cold", "tea", "refreshing", "tea-based"],
@@ -281,7 +281,7 @@ export type MenuItem = {
     {
       id: "lemon-tea",
       name: "Lemon Tea",
-      description: "Teh hitam dengan perasan lemon segar",
+      description: "Seduhan black tea dengan perasan lemon",
       price: { hot: "-", cold: "14k" },
       image: "https://images.unsplash.com/photo-1556679343-c1c1c9308e4e?q=80&w=1964&auto=format&fit=crop",
       tags: ["cold", "tea", "citrus", "refreshing", "tea-based"],
@@ -366,7 +366,7 @@ export type MenuItem = {
     {
       id: "wedhang-uwuh",
       name: "Wedhang Uwuh",
-      description: "Minuman tradisional dengan rempah-rempah",
+      description: "Minuman tradisional Yogyakarta dengan rasa manis dan pedas rempah",
       price: { hot: "13k", cold: "-" },
       image: "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=1887&auto=format&fit=crop",
       tags: ["hot", "traditional", "spicy", "additional"],
@@ -509,7 +509,7 @@ export type MenuItem = {
     {
       id: "chocolate-cookie",
       name: "Chocolate",
-      description: "Cookies cokelat yang lembut di dalam, renyah di luar",
+      description: "Cookies dengan rasa chocolate dan choco chips",
       price: { hot: "8k" },
       image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1887&auto=format&fit=crop",
       tags: ["sweet", "dessert", "chocolate", "cookies"],
@@ -518,7 +518,7 @@ export type MenuItem = {
     {
       id: "red-velvet-cookie",
       name: "Red Velvet",
-      description: "Cookies red velvet dengan white chocolate chips",
+      description: "Cookies dengan rasa red velvet dengan white  chips",
       price: { hot: "8k" },
       image: "https://images.unsplash.com/photo-1618923850107-d1a234d7a73a?q=80&w=1887&auto=format&fit=crop",
       tags: ["sweet", "dessert", "cookies"],
@@ -527,7 +527,7 @@ export type MenuItem = {
     {
       id: "cook-n-cream-cookie",
       name: "Cook N Cream",
-      description: "Cookies dengan isian krim",
+      description: "Cookies original dengan campuran white cream oreo",
       price: { hot: "8k" },
       image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?q=80&w=1887&auto=format&fit=crop",
       tags: ["sweet", "dessert", "cream", "cookies"],
@@ -536,7 +536,7 @@ export type MenuItem = {
     {
       id: "mix-cookies",
       name: "Mix Cookies",
-      description: "Campuran berbagai jenis cookies",
+      description: "Dua keping cookies ditambah scoop ice cream vanilla",
       price: { hot: "15k" },
       image: "https://images.unsplash.com/photo-1597733153203-a54d0fbc47de?q=80&w=1890&auto=format&fit=crop",
       tags: ["sweet", "dessert", "sharing", "cookies"],
